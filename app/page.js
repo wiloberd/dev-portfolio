@@ -1,5 +1,6 @@
 import styles from "./page.module.css"
 import Tag from "../components/Tag/Tag"
+import Link from "next/link"
 
 const technologies = [
   "React",
@@ -26,19 +27,19 @@ export default function Home() {
         </p>
 
         <div className={styles.heroButtons}>
-          <a
-            href="#projects"
+          <Link
+            href="/projects"
             className={`${styles.btn} ${styles.btnPrimary}`}
           >
             Ver projetos
-          </a>
+          </Link>
 
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className={`${styles.btn} ${styles.btnSecondary}`}
           >
             Entrar em contato
-          </a>
+          </Link>
         </div>
 
         <div className={styles.tagsContainer}>

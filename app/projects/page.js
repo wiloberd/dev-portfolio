@@ -23,7 +23,7 @@ export default function Projects() {
       <div className={styles.grid}>
         {projectsData.map((project) => (
           <Link
-            href={`/projets/${project.slug}`}
+            href={`/projects/${project.slug}`}
             key={project.id}
             className={styles.card}
           >
