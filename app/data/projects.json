@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "slug": "automation-system",
+    "title": "Sistema de Automação de Processos",
+    "shortDescription": "Projeto focado em automação de tarefas e integração entre sistemas.",
+    "longDescription": "Projeto em desenvolvimento voltado para automação de processos, consumo de APIs REST, integração entre serviços e otimização de fluxos operacionais. O objetivo é criar soluções que reduzam tarefas repetitivas e melhorem a produtividade através da tecnologia.",
+    "image": "/images/placeholder.png",
+    "tags": ["Python", "Automação"],
+    "github": "#",
+    "demo": "#",
+    "featured": true,
+    "status": "Em Desenvolvimento"
+  },
+  {
+    "id": 2,
+    "slug": "music-store",
+    "title": "Loja Virtual de Instrumentos Musicais",
+    "shortDescription": "E-commerce moderno para venda de instrumentos musicais.",
+    "longDescription": "Projeto de estudo focado no desenvolvimento de uma loja virtual responsiva para comercialização de instrumentos musicais, incluindo catálogo de produtos, sistema de carrinho, integração de pagamentos e gerenciamento administrativo.",
+    "image": "/images/placeholder.png",
+    "tags": ["Django", "PostgreSQL", "Next.js"],
+    "github": "#",
+    "demo": "#",
+    "featured": true,
+    "status": "Projeto Pessoal"
+  },
+   {
+  "id": 3,
+  "slug": "developer-portfolio",
+  "title": "Portfolio Profissional Moderno",
+  "shortDescription": "Portfolio profissional desenvolvido com Next.js.",
+  "longDescription": "Projeto pessoal criado para apresentar experiências, estudos, competências técnicas e projetos relacionados ao desenvolvimento web e sistemas.",
+  "image": "/images/placeholder.png",
+  "tags": ["Next.js", "React", "CSS Modules"],
+  "github": "#",
+  "demo": "#",
+  "featured": false,
+  "status": "Ativo"
+}
+
+]

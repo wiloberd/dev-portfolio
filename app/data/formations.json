@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Bacharelado em Sistemas de Informação",
+    "slug": "bacharelado-sistemas-informacao",
+    "description": "Formação superior focada em desenvolvimento de software, banco de dados, engenharia de software, redes, sistemas web e análise de sistemas.",
+    "tags": ["Concluído", "IFC"],
+    "image": "/images/placeholder.png"
+  },
+  {
+    "id": 2,
+    "title": "Desenvolvimento Web Full Stack",
+    "slug": "desenvolvimento-web-fullstack",
+    "description": "Estudos e projetos práticos em desenvolvimento web utilizando React.js, Next.js, Python, Django, APIs REST e integração de sistemas.",
+    "tags": ["React", "Django"],
+    "image": "/images/placeholder.png"
+  },
+  {
+    "id": 3,
+    "title": "Infraestrutura e Deploy de Aplicações",
+    "slug": "infraestrutura-deploy",
+    "description": "Conhecimentos em Docker, Nginx, deploy de aplicações web, cloud computing e noções de redes e infraestrutura.",
+    "tags": ["Docker", "Cloud"],
+    "image": "/images/placeholder.png"
+  }
+]
