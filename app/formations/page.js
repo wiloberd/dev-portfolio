@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import formationsData from "@/app/data/formations.json";
 import Tag from "@/components/Tag/Tag";
 import Image from "next/image";
+import VerMaisBtn from "@/components/VerMais/VerMaisBtn";
 
 export const metadata = {
   title: "Formations | Portfólio",
@@ -48,9 +49,7 @@ export default function Formations() {
               </div>
 
               <span className={styles.containerViewMore}>
-                <Link href={`/formations/${formation.slug}`} className={styles.viewMore}>
-                  Ver Mais →
-                </Link>
+                <VerMaisBtn url={`formations/${formation.slug}`} />
               </span>
             </div>
           </div>

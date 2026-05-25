@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import projectsData from "@/app/data/projects.json";
 import Tag from "@/components/Tag/Tag";
 import Image from "next/image";
+import VerMaisBtn from "@/components/VerMais/VerMaisBtn";
 
 export const metadata = {
   title: "Projetos | Portfolio",
@@ -49,11 +50,7 @@ export default function Projects() {
               </div>
 
               <span className={styles.containerViewMore}>
-              <Link
-                href={`/projects/${project.slug}`}
-                className={styles.viewMore}>
-                Ver Mais →
-                </Link>
+                <VerMaisBtn url={`/projects/${project.slug}`} />
               </span>
             </div>
           </div>
