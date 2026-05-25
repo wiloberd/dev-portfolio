@@ -7,10 +7,11 @@ import Image from "next/image";
 export const metadata = {
   title: "Projetos | Portfolio",
   description:
-    "Conheça projetos, estudos e aplicações desenvolvidas utilizando tecnologias modernas.",
+    "Conheça alguns dos projetos, estudos e soluções que venho desenvolvendo na área de tecnologia.",
 };
 
 export default function Projects() {
+
   return (
     <div className="container">
       <h1 className="title">Meus Projetos</h1>
@@ -20,14 +21,10 @@ export default function Projects() {
         na área de tecnologia.
       </p>
 
-      <div className={styles.grid}>
+      <div className={styles.grid} >
         {projectsData.map((project) => (
-          <Link
-            href={`/projects/${project.slug}`}
-            key={project.id}
-            className={styles.card}
-          >
-            <div className={styles.imageWrapper}>
+          <div key={project.id} className={styles.card}>
+          <div className={styles.imageWrapper}> 
               <Image
                 src={project.image}
                 alt={project.title}
@@ -51,11 +48,15 @@ export default function Projects() {
                 ))}
               </div>
 
-              <span className={styles.viewMore}>
-                Ver projeto →
+              <span className={styles.containerViewMore}>
+              <Link
+                href={`/projects/${project.slug}`}
+                className={styles.viewMore}>
+                Ver Mais →
+                </Link>
               </span>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </div>
