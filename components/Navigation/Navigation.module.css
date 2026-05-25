@@ -20,7 +20,7 @@
   font-weight: 700;
   color: #667eea;
   text-decoration: none;
-  z-index: 101;
+  /* z-index: 101; */
 }
 
 .menu {

@@ -69,7 +69,7 @@ export default function About() {
 
               <ul>
                 <li>Git & GitHub</li>
-                <li>Postman</li>
+                <li>Postman / Insomnia</li>
                 {/* <li>Figma</li> */}
                 <li>VS Code</li>
                 <li>Chrome DevTools</li>
