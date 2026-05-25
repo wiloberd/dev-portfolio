@@ -28,13 +28,13 @@
    {
   "id": 3,
   "slug": "developer-portfolio",
-  "title": "Portfolio Profissional Moderno",
-  "shortDescription": "Portfolio profissional desenvolvido com Next.js.",
+  "title": "Portfólio Profissional Moderno",
+  "shortDescription": "Portfólio profissional desenvolvido com Next.js.",
   "longDescription": "Projeto pessoal criado para apresentar experiências, estudos, competências técnicas e projetos relacionados ao desenvolvimento web e sistemas.",
   "image": "/images/projects/portfolio-soft-engineer.webp",
   "tags": ["Next.js", "React", "CSS Modules"],
-  "github": "#",
-  "demo": "#",
+  "github": "https://github.com/wiloberd/dev-portfolio",
+  "demo": "/",
   "featured": false,
   "status": "Ativo"
 }

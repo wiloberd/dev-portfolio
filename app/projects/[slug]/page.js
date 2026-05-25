@@ -66,7 +66,7 @@ export default async function ProjectDetail({ params }) {
           <div className={styles.links}>
             <a
               href={project.github}
-              target="_self"
+              target="_blank"
               rel="noopener noreferrer"
               className={styles.link}
             >
@@ -74,7 +74,7 @@ export default async function ProjectDetail({ params }) {
             </a>
             <a
               href={project.demo}
-              target="_self"
+              target="_blank"
               rel="noopener noreferrer"
               className={`${styles.link} ${styles.linkPrimary}`}
             >
