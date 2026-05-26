@@ -17,7 +17,8 @@ const nextConfig = {
     ],
   },
   turbopack: {
-    useSystemTlsCerts: true,
+    // root: "./"
+    // useSystemTlsCerts: true,
   },
 };
 

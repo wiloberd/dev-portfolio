@@ -1,6 +1,7 @@
-import styles from "./page.module.css"
-import Tag from "../components/Tag/Tag"
-import Link from "next/link"
+import styles from "@/app/[locale]/page.module.css"
+import Tag from "@/components/Tag/Tag"
+// import Link from "next/link"
+import { Link } from '@/i18n/navigation';
 import {useTranslations} from 'next-intl';
 
 const technologies = [
