@@ -1,6 +1,7 @@
 import styles from "./page.module.css"
 import Tag from "../components/Tag/Tag"
 import Link from "next/link"
+import {useTranslations} from 'next-intl';
 
 const technologies = [
   "React",
@@ -11,11 +12,13 @@ const technologies = [
 ]
 
 export default function Home() {
+   const t = useTranslations('HomePage');
+
   return (
     <div className={styles.hero}>
       <div className={styles.heroContent}>
         <h1 className={styles.heroTitle}>
-          Olá, eu sou <span className={styles.highlight}>Roberd Celestin</span>
+          {t("title")} Olá, eu sou <span className={styles.highlight}>Roberd Celestin</span>
         </h1>
 
         <p className={styles.heroSubtitle}>
