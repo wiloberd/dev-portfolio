@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation/Navigation";
 import Footer from "@/components/Footer/Footer";
 import {NextIntlClientProvider} from 'next-intl';
+import { getMessages } from "next-intl/server";
 
 // Configurer Inter pour le texte courant
 const inter = Inter({
@@ -25,11 +26,13 @@ export const metadata = {
   description: "Développeur web passionné par React et Next.js",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+    const messages = await getMessages();
+
   return (
-    <html lang="fr" className={`${inter.variable} ${poppins.variable}`}>
+    <html className={`${inter.variable} ${poppins.variable}`}>
       <body className={`${inter.variable}`}>
-        <NextIntlClientProvider>
+      <NextIntlClientProvider messages={messages}>
           <Navigation />
             <main>{children}</main>
           <Footer />
