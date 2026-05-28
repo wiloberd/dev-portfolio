@@ -31,6 +31,15 @@
   padding: 0;
 }
 
+.containerMenuSwitcherLocale {
+  display: flex;
+  gap: 2rem;
+}
+
+.swictherContainer{
+  display: flex;
+}
+
 .link {
   text-decoration: none;
   color: #333;
@@ -86,6 +95,12 @@
     display: flex;
   }
 
+  .containerMenuSwitcherLocale {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+  }
+
   .menu {
     position: fixed;
     top: 0;
@@ -107,6 +122,7 @@
   .menu li {
     width: 100%;
   }
+  
 
   .link {
     display: block;
