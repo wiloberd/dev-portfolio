@@ -1,5 +1,126 @@
 {
+  "Navigation": {
+    "logo": "Mon portfolio",
+
+    "menu": {
+      "home": "Accueil",
+      "projects": "Projets",
+      "formations": "Formations",
+      "about": "À propos",
+      "contact": "Contact"
+    },
+
+    "mobileMenu": "Menu"
+  },
+
   "HomePage": {
-    "title": "Bonjour le monde!"
+    "greeting": "Bonjour, je suis",
+    "title": "Bonjour, je suis",
+    "subtitle": "Développeur Full Stack",
+
+    "description": "Je crée des applications web modernes, performantes et accessibles avec React, Next.js, Python et Django.",
+
+    "buttons": {
+      "projects": "Voir les projets",
+      "contact": "Me contacter"
+    },
+
+    "technologies": {
+      "react": "React",
+      "nextjs": "Next.js",
+      "python": "Python",
+      "django": "Django",
+      "apis": "APIs REST"
+    }
+  },
+
+  "ProjectsPage": {
+    "title": "Mes Projets",
+
+    "description": "Découvrez quelques projets, études et solutions que je développe dans le domaine de la technologie.",
+
+    "viewMore": "Voir plus →",
+
+    "metadata": {
+      "title": "Projets | Portfolio",
+      "description": "Découvrez quelques projets, études et solutions que je développe dans le domaine de la technologie."
+    }
+  },
+
+  "FormationsPage": {
+    "title": "Formation & Études",
+
+    "description": "Découvrez mon parcours d’apprentissage et d’évolution dans le domaine de la technologie.",
+
+    "viewMore": "Voir plus →",
+
+    "metadata": {
+      "title": "Formations | Portfolio",
+      "description": "Découvrez mon parcours d’apprentissage et d’évolution dans le domaine de la technologie."
+    }
+  },
+
+  "AboutPage": {
+    "title": "À propos de moi",
+
+    "bio": {
+      "title": "Qui suis-je ?",
+
+      "paragraph1": "Professionnel de la technologie passionné par le développement logiciel, les systèmes web et les solutions modernes. Diplômé en Systèmes d’Information, avec une expérience dans le développement et la maintenance d’applications web, l’intégration d’APIs REST et les bases de données.",
+
+      "paragraph2": "J’aime transformer des idées en solutions fonctionnelles en combinant technologie, apprentissage continu et résolution de problèmes réels grâce à des systèmes efficaces et évolutifs."
+    },
+
+    "skills": {
+      "title": "Compétences",
+
+      "frontend": {
+        "title": "Frontend"
+      },
+
+      "backend": {
+        "title": "Backend"
+      },
+
+      "infrastructure": {
+        "title": "Infrastructure"
+      },
+
+      "tools": {
+        "title": "Outils"
+      }
+    }
+  },
+
+  "ContactPage": {
+    "title": "Contact",
+
+    "description": "Vous avez une opportunité, un projet ou souhaitez discuter de technologie ? Contactez-moi !",
+
+    "contactInfo": {
+      "title": "Informations de contact",
+
+      "email": "Email :",
+      "linkedin": "LinkedIn :",
+      "github": "GitHub :",
+
+      "linkedinProfile": "Mon profil LinkedIn",
+      "githubProfile": "Mon profil GitHub"
+    },
+
+    "ContactForm": {
+      "successMessage": "✅ Message envoyé avec succès ! Je vous répondrai bientôt.",
+
+      "fields": {
+        "name": "Nom",
+        "email": "Email",
+        "message": "Message"
+      },
+
+      "buttons": {
+        "sending": "Envoi...",
+        "submit": "Envoyer le message"
+      }
+    }
   }
 }

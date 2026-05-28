@@ -1,5 +1,126 @@
 {
+  "Navigation": {
+    "logo": "My portfolio",
+
+    "menu": {
+      "home": "Home",
+      "projects": "Projects",
+      "formations": "Education",
+      "about": "About me",
+      "contact": "Contact"
+    },
+
+    "mobileMenu": "Menu"
+  },
+
   "HomePage": {
-    "title": "Hello world!"
+    "greeting": "Hello, I am",
+    "title": "Hello, I am",
+    "subtitle": "Full Stack Developer",
+
+    "description": "I build modern, high-performance and accessible web applications using React, Next.js, Python and Django.",
+
+    "buttons": {
+      "projects": "View projects",
+      "contact": "Get in touch"
+    },
+
+    "technologies": {
+      "react": "React",
+      "nextjs": "Next.js",
+      "python": "Python",
+      "django": "Django",
+      "apis": "REST APIs"
+    }
+  },
+
+  "ProjectsPage": {
+    "title": "My Projects",
+
+    "description": "Discover some of the projects, studies and solutions I have been developing in the technology field.",
+
+    "viewMore": "View more →",
+
+    "metadata": {
+      "title": "Projects | Portfolio",
+      "description": "Discover some of the projects, studies and solutions I have been developing in the technology field."
+    }
+  },
+
+  "FormationsPage": {
+    "title": "Education & Learning",
+
+    "description": "Explore my learning journey and growth in the technology field.",
+
+    "viewMore": "View more →",
+
+    "metadata": {
+      "title": "Education | Portfolio",
+      "description": "Explore my learning journey and growth in the technology field."
+    }
+  },
+
+  "AboutPage": {
+    "title": "About Me",
+
+    "bio": {
+      "title": "Who am I?",
+
+      "paragraph1": "Technology professional passionate about software development, web systems and modern solutions. Graduated in Information Systems, with experience in web application development and maintenance, REST API integration and databases.",
+
+      "paragraph2": "I enjoy transforming ideas into functional solutions, always combining technology, continuous learning and real problem solving through efficient and scalable systems."
+    },
+
+    "skills": {
+      "title": "Skills",
+
+      "frontend": {
+        "title": "Frontend"
+      },
+
+      "backend": {
+        "title": "Backend"
+      },
+
+      "infrastructure": {
+        "title": "Infrastructure"
+      },
+
+      "tools": {
+        "title": "Tools"
+      }
+    }
+  },
+
+  "ContactPage": {
+    "title": "Contact",
+
+    "description": "Do you have an opportunity, project or would like to talk about technology? Get in touch with me!",
+
+    "contactInfo": {
+      "title": "Contact Information",
+
+      "email": "Email:",
+      "linkedin": "LinkedIn:",
+      "github": "GitHub:",
+
+      "linkedinProfile": "My LinkedIn profile",
+      "githubProfile": "My GitHub profile"
+    },
+
+    "ContactForm": {
+      "successMessage": "✅ Message sent successfully! I will get back to you soon.",
+
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message"
+      },
+
+      "buttons": {
+        "sending": "Sending...",
+        "submit": "Send message"
+      }
+    }
   }
 }
