@@ -1,17 +1,47 @@
 import styles from "./page.module.css";
 import formationsData from "@/app/data/formations.json";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+
+  const t = await getTranslations("FormationsPage.FormationDetailPage");
+
+  const formation = formationsData.find(
+    (f) => f.slug === slug
+  );
+
+  if (!formation) {
+    return {
+      title: t("notFound.title"),
+    };
+  }
+
+  return {
+    title: `${formation.title} | Portfolio`,
+    description: formation.longDescription,
+
+    openGraph: {
+      title: formation.title,
+      description: formation.shortDescription,
+      images: [formation.image],
+    },
+  };
+}
 
 export default async function FormationDetail({ params }) {
   const { slug } = await params;
   const formation = formationsData.find((formation) => formation.slug === slug);
 
+  const t = await getTranslations("FormationsPage.FormationDetailPage");
+
   // Si la formation n'existe pas, afficher un message
   if (!formation) {
     return (
       <div className={styles.container}>
-        <h1>Formation non trouvée</h1>
-        <p>Cette formation n&apos;existe pas ou a été supprimée.</p>
+        <h1>{t("notFound.title")}</h1>
+        <p>{t("notFound.description")}</p>
       </div>
     );
   }
@@ -36,7 +66,7 @@ export default async function FormationDetail({ params }) {
         </div>
 
         <div className={styles.details}>
-          <h2>Detalhes</h2>
+          <h2>{t("details")}</h2>
           <div className={styles.technologies}>
             {formation.tags.map((tag, index) => (
               <span key={index} className={styles.tech}>

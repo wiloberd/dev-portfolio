@@ -20,6 +20,11 @@
 
     "description": "I build modern, high-performance and accessible web applications using React, Next.js, Python and Django.",
 
+    "metadata": {
+    "title": "Roberd Celestin | Full Stack Developer",
+    "description": "Full Stack developer specialized in React, Next.js, Python and modern web applications"
+    },
+
     "buttons": {
       "projects": "View projects",
       "contact": "Get in touch"
@@ -44,7 +49,20 @@
     "metadata": {
       "title": "Projects | Portfolio",
       "description": "Discover some of the projects, studies and solutions I have been developing in the technology field."
+    },
+    
+    "ProjectDetailPage": {
+    "notFound": {
+      "title": "Project not found"
+    },
+
+    "technologies": "Technologies used",
+
+    "buttons": {
+      "code": "View code →",
+      "demo": "View demo →"
     }
+  }
   },
 
   "FormationsPage": {
@@ -57,6 +75,14 @@
     "metadata": {
       "title": "Education | Portfolio",
       "description": "Explore my learning journey and growth in the technology field."
+    },
+    "FormationDetailPage": {
+    "notFound": {
+      "title": "Education not found",
+      "description": "This education entry does not exist or has been removed."
+    },
+
+    "details": "Details"
     }
   },
 

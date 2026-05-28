@@ -4,7 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation/Navigation";
 import Footer from "@/components/Footer/Footer";
 import {NextIntlClientProvider} from 'next-intl';
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 
 // Configurer Inter pour le texte courant
 const inter = Inter({
@@ -21,10 +21,16 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-export const metadata = {
-  title: "Portfolio de Roberd Celestin | Développeur Web",
-  description: "Développeur web passionné par React et Next.js",
-};
+export async function generateMetadata() {
+
+  const t = await getTranslations("HomePage.metadata");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
 
 export default async function RootLayout({ children, params }) {
     const messages = await getMessages();

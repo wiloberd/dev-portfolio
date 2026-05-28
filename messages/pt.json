@@ -18,6 +18,11 @@
     "subtitle": "Desenvolvedor Full Stack",
     "description": "Eu crio aplicações web modernas, de alto desempenho e acessíveis usando React, Next.js, Python e Django.",
 
+    "metadata": {
+        "title": "Portfolio de Roberd Celestin | Développeur Web",
+        "description": "Développeur web passionné par React et Next.js"
+    },
+
     "buttons": {
       "projects": "Ver projetos",
       "contact": "Entrar em contato"
@@ -39,7 +44,19 @@
       "metadata": {
         "title": "Projetos | Portfolio",
         "description": "Conheça alguns dos projetos, estudos e soluções que venho desenvolvendo na área de tecnologia."
+      },
+      "ProjectDetailPage": {
+      "notFound": {
+        "title": "Projeto não encontrado"
+      },
+
+      "technologies": "Tecnologias utilizadas",
+
+      "buttons": {
+        "code": "Ver código →",
+        "demo": "Ver demonstração →"
       }
+    }
     }, 
     "FormationsPage": {
       "title": "Formação & Estudos",
@@ -49,7 +66,15 @@
       "metadata": {
         "title": "Formations | Portfólio",
         "description": "Descubra minha trajetória de aprendizado e evolução na área de tecnologia."
-      }
+      },
+      "FormationDetailPage": {
+      "notFound": {
+        "title": "Formação não encontrada",
+        "description": "Esta formação não existe ou foi removida."
+      },
+
+      "details": "Detalhes"
+    }
     },
     "AboutPage": {
       "title": "Sobre Mim",

@@ -2,20 +2,27 @@ import styles from "./page.module.css";
 import projectsData from "@/app/data/projects.json";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const project = projectsData.find((p) => p.slug === slug);
+
+  const t = await getTranslations("ProjectsPage.ProjectDetailPage");
+
+  const project = projectsData.find(
+    (p) => p.slug === slug
+  );
 
   if (!project) {
     return {
-      title: "Projet non trouvé",
+      title: t("notFound.title"),
     };
   }
 
   return {
-    title: `${project.title} | Portfólio`,
+    title: `${project.title} | Portfolio`,
     description: project.longDescription,
+
     openGraph: {
       title: project.title,
       description: project.shortDescription,
@@ -29,9 +36,20 @@ export default async function ProjectDetail({ params }) {
   // Next.js passe automatiquement le slug dans params
   const project = projectsData.find((project) => project.slug === slug);
 
+  const t = await getTranslations("ProjectsPage.ProjectDetailPage");
+
   // Si le projet n'existe pas, afficher la page 404
+  // if (!project) {
+  //   notFound();
+  // }
+
   if (!project) {
-    notFound();
+    return (
+      <div className={styles.container}>
+        <h1>{t("notFound.title")}</h1>
+        <p>{t("notFound.description")}</p>
+      </div>
+    );
   }
 
   return (
@@ -54,7 +72,7 @@ export default async function ProjectDetail({ params }) {
         </div>
 
         <div className={styles.details}>
-          <h2>Tecnologias utilizadas</h2>
+          <h2>{t("technologies")}</h2>
           <div className={styles.technologies}>
             {project.tags.map((tech, index) => (
               <span key={index} className={styles.tech}>
@@ -70,7 +88,7 @@ export default async function ProjectDetail({ params }) {
               rel="noopener noreferrer"
               className={styles.link}
             >
-              Voir le code →
+               {t("buttons.code")}
             </a>
             <a
               href={project.demo}
@@ -78,7 +96,7 @@ export default async function ProjectDetail({ params }) {
               rel="noopener noreferrer"
               className={`${styles.link} ${styles.linkPrimary}`}
             >
-              Voir la démo →
+               {t("buttons.demo")}
             </a>
           </div>
         </div>
