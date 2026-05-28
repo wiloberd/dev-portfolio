@@ -26,11 +26,12 @@ export const metadata = {
   description: "Développeur web passionné par React et Next.js",
 };
 
-export default async function RootLayout({ children }) {
+export default async function RootLayout({ children, params }) {
     const messages = await getMessages();
+    const {locale} = await params;
 
   return (
-    <html className={`${inter.variable} ${poppins.variable}`}>
+    <html lang={locale} className={`${inter.variable} ${poppins.variable}`}>
       <body className={`${inter.variable}`}>
       <NextIntlClientProvider messages={messages}>
           <Navigation />
