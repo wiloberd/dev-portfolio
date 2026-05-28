@@ -8,9 +8,7 @@ export async function generateMetadata({ params }) {
 
   const t = await getTranslations("FormationsPage.FormationDetailPage");
 
-  const formation = formationsData.find(
-    (f) => f.slug === slug
-  );
+  const formation = formationsData.find( (f) => f.slug === slug);
 
   if (!formation) {
     return {
