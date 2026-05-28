@@ -9,9 +9,7 @@ export async function generateMetadata({ params }) {
 
   const t = await getTranslations("ProjectsPage.ProjectDetailPage");
 
-  const project = projectsData.find(
-    (p) => p.slug === slug
-  );
+  const project = projectsData.find((p) => p.slug === slug);
 
   if (!project) {
     return {
