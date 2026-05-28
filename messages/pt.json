@@ -1,5 +1,115 @@
 {
+  "Navigation": {
+    "logo": "Meu portfólio",
+
+    "menu": {
+      "home": "Home",
+      "projects": "Projetos",
+      "formations": "Formações",
+      "about": "Sobre mim",
+      "contact": "Contato"
+    },
+
+    "mobileMenu": "Menu"
+  },
   "HomePage": {
-    "title": "Olá mundo!"
+    "greeting": "Olá, eu sou",
+    "title": "Olá, eu sou",
+    "subtitle": "Desenvolvedor Full Stack",
+    "description": "Eu crio aplicações web modernas, de alto desempenho e acessíveis usando React, Next.js, Python e Django.",
+
+    "buttons": {
+      "projects": "Ver projetos",
+      "contact": "Entrar em contato"
+    },
+
+    "technologies": {
+      "react": "React",
+      "nextjs": "Next.js",
+      "python": "Python",
+      "django": "Django",
+      "apis": "APIs REST"
+    }
+    }, 
+    "ProjectsPage": {
+      "title": "Meus Projetos",
+      "description": "Conheça alguns dos projetos, estudos e soluções que venho desenvolvendo na área de tecnologia.",
+      "viewMore": "Ver mais →",
+
+      "metadata": {
+        "title": "Projetos | Portfolio",
+        "description": "Conheça alguns dos projetos, estudos e soluções que venho desenvolvendo na área de tecnologia."
+      }
+    }, 
+    "FormationsPage": {
+      "title": "Formação & Estudos",
+      "description": "Descubra minha trajetória de aprendizado e evolução na área de tecnologia.",
+      "viewMore": "Ver mais →",
+
+      "metadata": {
+        "title": "Formations | Portfólio",
+        "description": "Descubra minha trajetória de aprendizado e evolução na área de tecnologia."
+      }
+    },
+    "AboutPage": {
+      "title": "Sobre Mim",
+
+      "bio": {
+        "title": "Quem sou eu?",
+
+        "paragraph1": "Profissional de tecnologia apaixonado por desenvolvimento de software, sistemas web e soluções modernas. Formado em Sistemas de Informação, possuo experiência no desenvolvimento e manutenção de aplicações web, integração de APIs REST e bancos de dados.",
+
+        "paragraph2": "Gosto de transformar ideias em soluções funcionais, buscando sempre unir tecnologia, aprendizado contínuo e resolução de problemas reais através do desenvolvimento de sistemas eficientes e escaláveis."
+      },
+
+      "skills": {
+        "title": "Competências",
+
+        "frontend": {
+          "title": "Frontend"
+        },
+
+        "backend": {
+          "title": "Backend"
+        },
+
+        "infrastructure": {
+          "title": "Infraestrutura"
+        },
+
+        "tools": {
+          "title": "Ferramentas"
+        }
+      }
+    },
+  "ContactPage": {
+    "title": "Contato",
+
+    "description": "Tem alguma oportunidade, projeto ou deseja conversar sobre tecnologia? Entre em contato comigo!",
+
+    "contactInfo": {
+      "title": "Informações de Contato",
+
+      "email": "Email:",
+      "linkedin": "LinkedIn:",
+      "github": "GitHub:",
+
+      "linkedinProfile": "Meu perfil no LinkedIn",
+      "githubProfile": "Meu perfil no GitHub"
+    }, 
+    "ContactForm": {
+      "successMessage": "✅ Mensagem enviada com sucesso! Retornarei em breve.",
+
+      "fields": {
+        "name": "Nome",
+        "email": "Email",
+        "message": "Mensagem"
+      },
+
+      "buttons": {
+        "sending": "Enviando...",
+        "submit": "Enviar mensagem"
+      }
+    }
   }
 }

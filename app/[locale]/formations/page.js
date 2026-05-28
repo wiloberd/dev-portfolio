@@ -1,25 +1,29 @@
-import Link from "next/link";
 import styles from "./page.module.css";
 import formationsData from "@/app/data/formations.json";
 import Tag from "@/components/Tag/Tag";
 import Image from "next/image";
 import VerMaisBtn from "@/components/VerMais/VerMaisBtn";
+import { getTranslations } from "next-intl/server";
 
-export const metadata = {
-  title: "Formations | Portfólio",
-  description:
-    "Descubra minha trajetória de aprendizado e evolução na área de tecnologia.",
-};
+export async function generateMetadata() {
 
-export default function Formations() {
+  const t = await getTranslations("FormationsPage.metadata");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
+
+export default async function Formations() {
+  const t = await getTranslations("FormationsPage");
 
   return (
     <div className="container">
-      <h1 className="title">Formação & Estudos</h1>
+      <h1 className="title">{t("title")}</h1>
 
-      <p className="description">
-        Descubra minha trajetória de aprendizado e evolução na área de tecnologia.
-      </p>
+      <p className="description">{t("description")}</p>
 
       <div className={styles.grid}>
         {formationsData.map((formation) => (
@@ -49,7 +53,7 @@ export default function Formations() {
               </div>
 
               <span className={styles.containerViewMore}>
-                <VerMaisBtn url={`formations/${formation.slug}`} />
+                <VerMaisBtn url={`formations/${formation.slug}`} label={t("viewMore")} />
               </span>
             </div>
           </div>

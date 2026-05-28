@@ -1,15 +1,12 @@
-import Link from "next/link";
+import { Link } from '@/i18n/navigation'
 import styles from "./VerMaisBtn.module.css"
 
 
-export default function VerMaisBtn({url}){
+export default function VerMaisBtn({url, label}){
     
-    console.log(url)
     return (
         <>
-            <Link href={`${url}`} className={styles.viewMore}>
-                  Ver Mais →
-            </Link>
+            <Link href={`${url}`} className={styles.viewMore}>{label}</Link>
         </>
     )
 }

@@ -1,6 +1,5 @@
 import styles from "@/app/[locale]/page.module.css"
 import Tag from "@/components/Tag/Tag"
-// import Link from "next/link"
 import { Link } from '@/i18n/navigation';
 import {useTranslations} from 'next-intl';
 
@@ -19,15 +18,15 @@ export default function Home() {
     <div className={styles.hero}>
       <div className={styles.heroContent}>
         <h1 className={styles.heroTitle}>
-          {t("title")} Olá, eu sou <span className={styles.highlight}>Roberd Celestin</span>
+          {t("greeting")}<span className={styles.highlight}>Roberd Celestin</span>
         </h1>
 
         <p className={styles.heroSubtitle}>
-          Desenvolvedor Full Stack
+          {t("subtitle")}
         </p>
 
         <p className={styles.heroDescription}>
-          Eu crio aplicações web modernas, de alto desempenho e acessíveis usando React, Next.js, Python e Django.
+          {t("description")}
         </p>
 
         <div className={styles.heroButtons}>
@@ -35,14 +34,14 @@ export default function Home() {
             href="/projects"
             className={`${styles.btn} ${styles.btnPrimary}`}
           >
-            Ver projetos
+            {t("buttons.projects")}
           </Link>
 
           <Link
             href="/contact"
             className={`${styles.btn} ${styles.btnSecondary}`}
           >
-            Entrar em contato
+            {t("buttons.contact")}
           </Link>
         </div>
 

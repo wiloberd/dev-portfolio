@@ -1,35 +1,26 @@
+import { getTranslations } from "next-intl/server";
 import styles from "./page.module.css";
 
-export default function About() {
+export default async function About() {
+    const t = await getTranslations("AboutPage");
+
   return (
     <div className="container">
-      <h1 className="title">Sobre Mim</h1>
+      <h1 className="title">{t("title")}</h1>
 
       <div className={styles.content}>
         <div className={styles.bio}>
-          <h2>Quem sou eu?</h2>
-
-          <p>
-            Profissional de tecnologia apaixonado por desenvolvimento de
-            software, sistemas web e soluções modernas. Formado em Sistemas de
-            Informação, possuo experiência no desenvolvimento e manutenção de
-            aplicações web, integração de APIs REST e bancos de dados.
-          </p>
-
-          <p>
-            Gosto de transformar ideias em soluções funcionais, buscando sempre
-            unir tecnologia, aprendizado contínuo e resolução de problemas
-            reais através do desenvolvimento de sistemas eficientes e
-            escaláveis.
-          </p>
+          <h2>{t("bio.title")}</h2>
+          <p>{t("bio.paragraph1")}</p>
+          <p>{t("bio.paragraph2")}</p>
         </div>
 
         <div className={styles.skills}>
-          <h2>Competências</h2>
+          <h2>{t("skills.title")}</h2>
 
           <div className={styles.skillGrid}>
             <div className={styles.skillCategory}>
-              <h3>Frontend</h3>
+              <h3>{t("skills.frontend.title")}</h3>
 
               <ul>
                 <li>React.js & Next.js</li>
@@ -41,7 +32,7 @@ export default function About() {
             </div>
 
             <div className={styles.skillCategory}>
-              <h3>Backend</h3>
+              <h3>{t("skills.backend.title")}</h3>
 
               <ul>
                 <li>Python & Django</li>
@@ -53,7 +44,7 @@ export default function About() {
             </div>
 
             <div className={styles.skillCategory}>
-              <h3>Infraestrutura</h3>
+              <h3>{t("skills.infrastructure.title")}</h3>
 
               <ul>
                 <li>Docker</li>
@@ -65,7 +56,7 @@ export default function About() {
             </div>
 
             <div className={styles.skillCategory}>
-              <h3>Ferramentas</h3>
+              <h3>{t("skills.tools.title")}</h3>
 
               <ul>
                 <li>Git & GitHub</li>

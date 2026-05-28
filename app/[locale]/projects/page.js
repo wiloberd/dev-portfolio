@@ -1,26 +1,30 @@
-import Link from "next/link";
 import styles from "./page.module.css";
 import projectsData from "@/app/data/projects.json";
+import { getTranslations } from "next-intl/server";
 import Tag from "@/components/Tag/Tag";
 import Image from "next/image";
 import VerMaisBtn from "@/components/VerMais/VerMaisBtn";
 
-export const metadata = {
-  title: "Projetos | Portfolio",
-  description:
-    "Conheça alguns dos projetos, estudos e soluções que venho desenvolvendo na área de tecnologia.",
-};
+export async function generateMetadata() {
 
-export default function Projects() {
+  const t = await getTranslations("ProjectsPage.metadata");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
+export default async function Projects() {
+
+    const t = await getTranslations("ProjectsPage");
+  
 
   return (
     <div className="container">
-      <h1 className="title">Meus Projetos</h1>
+      <h1 className="title">{t("title")}</h1>
 
-      <p className="description">
-        Conheça alguns dos projetos, estudos e soluções que venho desenvolvendo
-        na área de tecnologia.
-      </p>
+      <p className="description">{t("description")}</p>
 
       <div className={styles.grid} >
         {projectsData.map((project) => (
@@ -50,7 +54,7 @@ export default function Projects() {
               </div>
 
               <span className={styles.containerViewMore}>
-                <VerMaisBtn url={`/projects/${project.slug}`} />
+                <VerMaisBtn url={`/projects/${project.slug}`} label={t("viewMore")} />
               </span>
             </div>
           </div>

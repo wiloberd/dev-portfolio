@@ -2,8 +2,10 @@
 
 import { useState } from 'react'
 import styles from './ContactForm.module.css'
+import { useTranslations } from 'next-intl';
 
 export default function ContactForm() {
+    const t = useTranslations("ContactPage.ContactForm");
 
     const [formData, setFormData] = useState({
         name: '',
@@ -50,13 +52,11 @@ export default function ContactForm() {
         <form className={styles.form} onSubmit={handleSubmit}>
 
             {status === 'success' && (
-                <div className={styles.successMessage}>
-                    ✅ Mensagem enviada com sucesso! Retornarei em breve.
-                </div>
+                <div className={styles.successMessage}>{t("successMessage")}</div>
             )}
 
             <div className={styles.formGroup}>
-                <label htmlFor="name">Nome</label>
+                <label htmlFor="name">{t("fields.name")}</label>
 
                 <input
                     type="text"
@@ -69,7 +69,7 @@ export default function ContactForm() {
             </div>
 
             <div className={styles.formGroup}>
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">{t("fields.email")}</label>
 
                 <input
                     type="email"
@@ -82,7 +82,7 @@ export default function ContactForm() {
             </div>
 
             <div className={styles.formGroup}>
-                <label htmlFor="message">Mensagem</label>
+                <label htmlFor="message">{t("fields.message")}</label>
 
                 <textarea
                     id="message"
@@ -99,9 +99,10 @@ export default function ContactForm() {
                 className={styles.submitBtn}
                 disabled={status === 'sending'}
             >
-                {status === 'sending'
-                    ? 'Enviando...'
-                    : 'Enviar mensagem'}
+                 {status === 'sending'
+                    ? t("buttons.sending")
+                    : t("buttons.submit")
+                }
             </button>
 
         </form>

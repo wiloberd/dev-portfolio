@@ -1,12 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-// import Link from 'next/link'
-import { Link } from '@/i18n/navigation';
-import { usePathname } from 'next/navigation'
+import { Link, usePathname } from '@/i18n/navigation';
 import styles from './Navigation.module.css'
+import { useTranslations } from 'next-intl';
 
 export default function Navigation() {
+  const t = useTranslations("Navigation");
+
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
 
@@ -22,14 +23,14 @@ export default function Navigation() {
     <nav className={styles.nav}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
-          Meu portfólio
+          {t("logo")}
         </Link>
 
         {/* Bouton burger pour mobile */}
         <button 
           className={styles.burger}
           onClick={toggleMenu}
-          aria-label="Menu"
+          aria-label={t("mobileMenu")}
         >
           <span className={isOpen ? styles.burgerOpen : ''}></span>
           <span className={isOpen ? styles.burgerOpen : ''}></span>
@@ -44,7 +45,7 @@ export default function Navigation() {
               className={pathname === '/' ? `${styles.link} ${styles.active}` : styles.link}
               onClick={closeMenu}
             >
-              Home
+              {t("menu.home")}
             </Link>
           </li>
           <li>
@@ -53,7 +54,7 @@ export default function Navigation() {
               className={pathname.startsWith('/projects') ? `${styles.link} ${styles.active}` : styles.link}
               onClick={closeMenu}
             >
-              Projects
+              {t("menu.projects")}
             </Link>
           </li>
           <li>
@@ -62,7 +63,7 @@ export default function Navigation() {
               className={pathname.startsWith('/formations') ? `${styles.link} ${styles.active}` : styles.link}
               onClick={closeMenu}
             >
-              Formations
+              {t("menu.formations")}
             </Link>
           </li>
           <li>
@@ -71,7 +72,7 @@ export default function Navigation() {
               className={pathname === '/about' ? `${styles.link} ${styles.active}` : styles.link}
               onClick={closeMenu}
             >
-              Sobre mim
+              {t("menu.about")}
             </Link>
           </li>
           <li>
@@ -80,7 +81,7 @@ export default function Navigation() {
               className={pathname === '/contact' ? `${styles.link} ${styles.active}` : styles.link}
               onClick={closeMenu}
             >
-              Contact
+              {t("menu.contact")}
             </Link>
           </li>
         </ul>
