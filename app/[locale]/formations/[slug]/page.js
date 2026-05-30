@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import formationsData from "@/app/data/formations.json";
+import { routing } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
@@ -79,7 +80,12 @@ export default async function FormationDetail({ params }) {
 }
 
 export function generateStaticParams() {
-  return formationsData.map((formation) => ({
-    slug: formation.slug,
-  }));
+  const locales = routing.locales;
+
+  return locales.flatMap((locale) =>
+    formationsData.map((formation) => ({
+      locale,
+      slug: formation.slug,
+    }))
+  );
 }

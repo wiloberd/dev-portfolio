@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import projectsData from "@/app/data/projects.json";
 import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
@@ -105,7 +106,12 @@ export default async function ProjectDetail({ params }) {
 
 // Cette fonction génère toutes les pages statiques au build
 export function generateStaticParams() {
-  return projectsData.map((project) => ({
-    slug: project.slug,
-  }));
+  const locales = routing.locales;
+
+  return locales.flatMap((locale) =>
+    projectsData.map((project) => ({
+      locale,
+      slug: project.slug,
+    }))
+  );
 }
