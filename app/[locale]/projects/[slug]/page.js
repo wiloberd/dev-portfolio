@@ -108,6 +108,7 @@ export default async function ProjectDetail({ params }) {
 export function generateStaticParams() {
   const locales = routing.locales;
 
+  
   return locales.flatMap((locale) =>
     projectsData.map((project) => ({
       locale,
